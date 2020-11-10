@@ -18,6 +18,7 @@ In this project I create a numeric matrix processor which can perform a variety 
 ```
 1. Add matrices
 2. Multiply matrix by a constant
+3. Multiply matrices
 0. Exit
 Your choice: 1
 Enter size of first matrix: 4 5
@@ -37,9 +38,10 @@ The result is:
 7.0 6.0 8.0 9.0 9.0 
 9.0 2.0 12.0 18.0 9.0 
 2.0 3.0 4.0 5.0 7.0 
-   
+
 1. Add matrices
 2. Multiply matrix by a constant
+3. Multiply matrices
 0. Exit
 Your choice: 2
 Enter size of matrix: 2 2
@@ -50,12 +52,47 @@ Enter constant: 0.5
 The result is:
 0.75 3.5 
 3.0 2.5 
-   
+
 1. Add matrices
 2. Multiply matrix by a constant
+3. Multiply matrices
+0. Exit
+Your choice: 3
+Enter size of first matrix: 3 3
+Enter first matrix:
+1 7 7
+6 6 4
+4 2 1
+Enter size of second matrix: 3 3
+Enter second matrix:
+3 2 4
+5 5 9
+8 0 10
+The result is:
+94.0 37.0 137.0 
+80.0 42.0 118.0 
+30.0 18.0 44.0 
+
+1. Add matrices
+2. Multiply matrix by a constant
+3. Multiply matrices
+0. Exit
+Your choice: 1
+Enter size of first matrix: 2 2
+Enter first matrix:
+1 2
+3 2
+Enter size of second matrix: 1 1
+Enter second matrix:
+1
+Matrices sizes are not equal.
+
+1. Add matrices
+2. Multiply matrix by a constant
+3. Multiply matrices
 0. Exit
 Your choice: 0
-   
+
 Process finished with exit code 0
 ```
 
@@ -63,9 +100,9 @@ Process finished with exit code 0
 List of features ready and TODOs for future development
 * Add two matrices
 * Multiply matrix by a constant
+* Multiply matrix by a matrix
 
 To-do list:
-* Multiply matrix by a matrix
 * Transpose matrix
 * Find the determinant of the matrix
 * Inverse matrix
