@@ -58,4 +58,22 @@ public class Matrix {
         }
         return mul;
     }
+
+    public Matrix mulByMatrix(Matrix m) {
+        Matrix mul = new Matrix(this.rows, m.columns);
+        for (int i = 0; i < this.rows; i++) {
+            for (int j = 0; j < m.columns; j++) {
+                mul.matrix[i][j] = mulMatricesCell(this, m, i, j);
+            }
+        }
+        return mul;
+    }
+
+    private double mulMatricesCell(Matrix a, Matrix b, int row, int col) {
+        double cell = 0;
+        for (int i = 0; i < b.rows; i++) {
+            cell += a.matrix[row][i] * b.matrix[i][col];
+        }
+        return cell;
+    }
 }
