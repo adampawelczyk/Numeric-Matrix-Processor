@@ -90,6 +90,24 @@ Matrices sizes are not equal.
 1. Add matrices
 2. Multiply matrix by a constant
 3. Multiply matrices
+4. Transpose matrix
+0. Exit
+Your choice: 4
+Enter matrix size: 4 4
+1 1 1 1
+2 2 2 2
+3 3 3 3
+4 4 4 4
+The result is:
+1.0 2.0 3.0 4.0 
+1.0 2.0 3.0 4.0 
+1.0 2.0 3.0 4.0 
+1.0 2.0 3.0 4.0 
+
+1. Add matrices
+2. Multiply matrix by a constant
+3. Multiply matrices
+4. Transpose matrix
 0. Exit
 Your choice: 0
 
@@ -101,9 +119,9 @@ List of features ready and TODOs for future development
 * Add two matrices
 * Multiply matrix by a constant
 * Multiply matrix by a matrix
+* Transpose matrix
 
 To-do list:
-* Transpose matrix
 * Find the determinant of the matrix
 * Inverse matrix
 
