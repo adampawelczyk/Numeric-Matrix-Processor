@@ -76,4 +76,14 @@ public class Matrix {
         }
         return cell;
     }
+
+    public Matrix transpose() {
+        Matrix m = new Matrix(this.columns, this.rows);
+        for (int i = 0; i < this.columns; i++) {
+            for (int j = 0; j < this.rows; j++) {
+                m.matrix[j][i] = this.matrix[i][j];
+            }
+        }
+        return m;
+    }
 }

@@ -70,6 +70,17 @@ public class Main {
                         System.out.println("Number of columns in one matrix should be equal to number of rows in second matrix.");
                     }
                 }
+                case 4 -> {
+                    System.out.print("Enter matrix size: ");
+                    int matrixARows = scanner.nextInt();
+                    int matrixAColumns = scanner.nextInt();
+                    Matrix matrixA = new Matrix(matrixARows, matrixAColumns);
+                    matrixA.fillMatrix();
+
+                    Matrix matrixB = matrixA.transpose();
+                    System.out.println("The result is:");
+                    matrixB.printMatrix();
+                }
                 case 0 -> System.exit(0);
 
                 default -> System.out.println("Unknown option!");
@@ -83,6 +94,7 @@ public class Main {
         System.out.println("1. Add matrices");
         System.out.println("2. Multiply matrix by a constant");
         System.out.println("3. Multiply matrices");
+        System.out.println("4. Transpose matrix");
         System.out.println("0. Exit");
     }
 }
