@@ -33,7 +33,12 @@ public class Matrix {
     public void printMatrix() {
         for (double[] row : this.matrix) {
             for (double element : row) {
-                System.out.print(element + " ");
+                if (element == (long) element) {
+                    System.out.printf("%d", (long) element);
+                } else {
+                    System.out.printf("%.2f", element);
+                }
+                System.out.print(" ");
             }
             System.out.print('\n');
         }
@@ -107,5 +112,18 @@ public class Matrix {
             }
         }
         return minorMatrix;
+    }
+
+    public Matrix inverse() {
+        double constant = 1 / calculateDeterminant(this);
+        Matrix temp = new Matrix(this.rows, this.columns);
+        for (int i = 0; i < this.rows; i++) {
+            for (int j = 0; j < this.columns; j++) {
+                double factor =  (i + j) % 2 == 1 ? -1 : 1;
+                temp.matrix[i][j] = factor * calculateDeterminant(calculateMinorMatrix(this, i, j));
+            }
+        }
+        temp = temp.transpose();
+        return temp.mulByNumber(constant);
     }
 }

@@ -41,8 +41,10 @@ public class Main {
                     Matrix matrix = new Matrix(matrixRows, matrixColumns);
                     System.out.println("Enter matrix:");
                     matrix.fillMatrix();
+
                     System.out.print("Enter constant: ");
                     double cons = scanner.nextDouble();
+
                     matrix = matrix.mulByNumber(cons);
                     System.out.println("The result is:");
                     matrix.printMatrix();
@@ -91,7 +93,28 @@ public class Main {
 
                     double det = Matrix.calculateDeterminant(matrix);
                     System.out.println("The result is:");
-                    System.out.println(det);
+                    if (det == (long) det) {
+                        System.out.printf("%d", (long) det);
+                    } else {
+                        System.out.printf("%s", det);
+                    }
+                    System.out.println();
+                }
+                case 6 -> {
+                    System.out.print("Enter size of matrix: ");
+                    int matrixRows = scanner.nextInt();
+                    int matrixColumns = scanner.nextInt();
+                    Matrix matrix = new Matrix(matrixRows, matrixColumns);
+                    System.out.println("Enter matrix:");
+                    matrix.fillMatrix();
+
+                    if (Matrix.calculateDeterminant(matrix) == 0) {
+                        System.out.println("This matrix doesn't have an inverse.");
+                    } else {
+                        Matrix inverse = matrix.inverse();
+                        System.out.println("The result is:");
+                        inverse.printMatrix();
+                    }
                 }
                 case 0 -> System.exit(0);
 
@@ -108,6 +131,7 @@ public class Main {
         System.out.println("3. Multiply matrices");
         System.out.println("4. Transpose matrix");
         System.out.println("5. Calculate determinant");
+        System.out.println("6. Inverse matrix");
         System.out.println("0. Exit");
     }
 }
