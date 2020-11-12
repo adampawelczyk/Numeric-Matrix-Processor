@@ -19,6 +19,8 @@ In this project I create a numeric matrix processor which can perform a variety 
 1. Add matrices
 2. Multiply matrix by a constant
 3. Multiply matrices
+4. Transpose matrix
+5. Calculate determinant
 0. Exit
 Your choice: 1
 Enter size of first matrix: 4 5
@@ -42,6 +44,8 @@ The result is:
 1. Add matrices
 2. Multiply matrix by a constant
 3. Multiply matrices
+4. Transpose matrix
+5. Calculate determinant
 0. Exit
 Your choice: 2
 Enter size of matrix: 2 2
@@ -56,6 +60,8 @@ The result is:
 1. Add matrices
 2. Multiply matrix by a constant
 3. Multiply matrices
+4. Transpose matrix
+5. Calculate determinant
 0. Exit
 Your choice: 3
 Enter size of first matrix: 3 3
@@ -76,6 +82,8 @@ The result is:
 1. Add matrices
 2. Multiply matrix by a constant
 3. Multiply matrices
+4. Transpose matrix
+5. Calculate determinant
 0. Exit
 Your choice: 1
 Enter size of first matrix: 2 2
@@ -91,6 +99,7 @@ Matrices sizes are not equal.
 2. Multiply matrix by a constant
 3. Multiply matrices
 4. Transpose matrix
+5. Calculate determinant
 0. Exit
 Your choice: 4
 Enter matrix size: 4 4
@@ -108,6 +117,22 @@ The result is:
 2. Multiply matrix by a constant
 3. Multiply matrices
 4. Transpose matrix
+5. Calculate determinant
+0. Exit
+Your choice: 5
+Enter size of matrix: 3 3
+Enter matrix:
+1 7 7
+6 6 4
+4 2 1
+The result is:
+-16.0
+
+1. Add matrices
+2. Multiply matrix by a constant
+3. Multiply matrices
+4. Transpose matrix
+5. Calculate determinant
 0. Exit
 Your choice: 0
 
@@ -120,9 +145,9 @@ List of features ready and TODOs for future development
 * Multiply matrix by a constant
 * Multiply matrix by a matrix
 * Transpose matrix
+* Find the determinant of the matrix
 
 To-do list:
-* Find the determinant of the matrix
 * Inverse matrix
 
 ## Status
