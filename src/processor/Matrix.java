@@ -86,4 +86,26 @@ public class Matrix {
         }
         return m;
     }
+
+    public static double calculateDeterminant(Matrix m) {
+        if (m.rows == 1) {
+            return m.matrix[0][0];
+        }
+        double determinant = 0;
+        for (int i = 0; i < m.rows; i++) {
+            int constant = i % 2 == 1 ? -1 : 1;
+            determinant += m.matrix[0][i] * constant * calculateDeterminant(calculateMinorMatrix(m, 0, i));
+        }
+        return determinant;
+    }
+
+    private static Matrix calculateMinorMatrix(Matrix m, int row, int column) {
+        Matrix minorMatrix = new Matrix(m.rows - 1, m.columns -1);
+        for (int i = 0; i < minorMatrix.rows; i++) {
+            for (int j = 0; j < minorMatrix.columns; j++) {
+                minorMatrix.matrix[i][j] = m.matrix[i >= row ? i + 1 : i][j >= column ? j + 1 : j];
+            }
+        }
+        return minorMatrix;
+    }
 }

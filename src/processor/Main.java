@@ -81,6 +81,18 @@ public class Main {
                     System.out.println("The result is:");
                     matrixB.printMatrix();
                 }
+                case 5 -> {
+                    System.out.print("Enter size of matrix: ");
+                    int matrixRows = scanner.nextInt();
+                    int matrixColumns = scanner.nextInt();
+                    Matrix matrix = new Matrix(matrixRows, matrixColumns);
+                    System.out.println("Enter matrix:");
+                    matrix.fillMatrix();
+
+                    double det = Matrix.calculateDeterminant(matrix);
+                    System.out.println("The result is:");
+                    System.out.println(det);
+                }
                 case 0 -> System.exit(0);
 
                 default -> System.out.println("Unknown option!");
@@ -95,6 +107,7 @@ public class Main {
         System.out.println("2. Multiply matrix by a constant");
         System.out.println("3. Multiply matrices");
         System.out.println("4. Transpose matrix");
+        System.out.println("5. Calculate determinant");
         System.out.println("0. Exit");
     }
 }
