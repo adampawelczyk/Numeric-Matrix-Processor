@@ -21,6 +21,7 @@ In this project I create a numeric matrix processor which can perform a variety 
 3. Multiply matrices
 4. Transpose matrix
 5. Calculate determinant
+6. Inverse matrix
 0. Exit
 Your choice: 1
 Enter size of first matrix: 4 5
@@ -36,32 +37,34 @@ Enter second matrix:
 1 2 3 9 8
 1 0 0 0 1
 The result is:
-2.0 3.0 7.0 8.0 10.0 
-7.0 6.0 8.0 9.0 9.0 
-9.0 2.0 12.0 18.0 9.0 
-2.0 3.0 4.0 5.0 7.0 
+2 3 7 8 10 
+7 6 8 9 9 
+9 2 12 18 9 
+2 3 4 5 7 
 
 1. Add matrices
 2. Multiply matrix by a constant
 3. Multiply matrices
 4. Transpose matrix
 5. Calculate determinant
+6. Inverse matrix
 0. Exit
 Your choice: 2
 Enter size of matrix: 2 2
 Enter matrix:
-1.5 7.0
-6.0 5.0
+1.5 7
+6 5
 Enter constant: 0.5
 The result is:
 0.75 3.5 
-3.0 2.5 
+3 2.5 
 
 1. Add matrices
 2. Multiply matrix by a constant
 3. Multiply matrices
 4. Transpose matrix
 5. Calculate determinant
+6. Inverse matrix
 0. Exit
 Your choice: 3
 Enter size of first matrix: 3 3
@@ -75,31 +78,16 @@ Enter second matrix:
 5 5 9
 8 0 10
 The result is:
-94.0 37.0 137.0 
-80.0 42.0 118.0 
-30.0 18.0 44.0 
+94 37 137 
+80 42 118 
+30 18 44 
 
 1. Add matrices
 2. Multiply matrix by a constant
 3. Multiply matrices
 4. Transpose matrix
 5. Calculate determinant
-0. Exit
-Your choice: 1
-Enter size of first matrix: 2 2
-Enter first matrix:
-1 2
-3 2
-Enter size of second matrix: 1 1
-Enter second matrix:
-1
-Matrices sizes are not equal.
-
-1. Add matrices
-2. Multiply matrix by a constant
-3. Multiply matrices
-4. Transpose matrix
-5. Calculate determinant
+6. Inverse matrix
 0. Exit
 Your choice: 4
 Enter matrix size: 4 4
@@ -108,16 +96,17 @@ Enter matrix size: 4 4
 3 3 3 3
 4 4 4 4
 The result is:
-1.0 2.0 3.0 4.0 
-1.0 2.0 3.0 4.0 
-1.0 2.0 3.0 4.0 
-1.0 2.0 3.0 4.0 
+1 2 3 4 
+1 2 3 4 
+1 2 3 4 
+1 2 3 4 
 
 1. Add matrices
 2. Multiply matrix by a constant
 3. Multiply matrices
 4. Transpose matrix
 5. Calculate determinant
+6. Inverse matrix
 0. Exit
 Your choice: 5
 Enter size of matrix: 3 3
@@ -126,29 +115,44 @@ Enter matrix:
 6 6 4
 4 2 1
 The result is:
--16.0
+-16
 
 1. Add matrices
 2. Multiply matrix by a constant
 3. Multiply matrices
 4. Transpose matrix
 5. Calculate determinant
+6. Inverse matrix
+0. Exit
+Your choice: 6
+Enter size of matrix: 3 3
+Enter matrix:
+2 -1 0
+0 1 2
+1 1 0
+The result is:
+0.33 0 0.33 
+-0.33 0 0.67 
+0.17 0.50 -0.33 
+
+1. Add matrices
+2. Multiply matrix by a constant
+3. Multiply matrices
+4. Transpose matrix
+5. Calculate determinant
+6. Inverse matrix
 0. Exit
 Your choice: 0
-
-Process finished with exit code 0
 ```
 
 ## Features
-List of features ready and TODOs for future development
+List of features
 * Add two matrices
 * Multiply matrix by a constant
 * Multiply matrix by a matrix
 * Transpose matrix
 * Find the determinant of the matrix
-
-To-do list:
 * Inverse matrix
 
 ## Status
-Project is: _in progress_
+Project is: _finished_
